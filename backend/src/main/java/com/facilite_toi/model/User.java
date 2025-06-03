@@ -1,4 +1,4 @@
-package com.facilite_toi;
+package com.facilite_toi.model;
 
 import java.time.LocalDateTime;
 import jakarta.persistence.Column;

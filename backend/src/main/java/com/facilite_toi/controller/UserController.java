@@ -1,6 +1,6 @@
 package com.facilite_toi.controller;
 
-import com.facilite_toi.User;
+import com.facilite_toi.model.User;
 import com.facilite_toi.repository.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;

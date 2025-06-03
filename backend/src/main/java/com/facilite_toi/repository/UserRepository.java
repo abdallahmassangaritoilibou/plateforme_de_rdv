@@ -1,8 +1,9 @@
 package com.facilite_toi.repository;
 
-import com.facilite_toi.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import com.facilite_toi.model.User;
 
 import java.util.Optional;
 
