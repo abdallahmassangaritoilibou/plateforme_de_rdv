@@ -1,0 +1,42 @@
+<mat-card-subtitle>Saisissez votre email et mot de passe</mat-card-subtitle>
+<mat-card class="login-card">
+  <mat-card-title >Connexion</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      
+      <!-- Email -->
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" required>
+        <mat-error *ngIf="f['email'].hasError('required')">
+          L'email est requis
+        </mat-error>
+        <mat-error *ngIf="f['email'].hasError('email')">
+          Format d'email invalide
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Mot de passe -->
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Mot de passe</mat-label>
+        <input matInput [type]="hidePassword ? 'password' : 'text'" formControlName="password" required>
+        <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="'Masquer/afficher mot de passe'" type="button">
+          <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+        </button>
+        <mat-error *ngIf="f['password'].hasError('required')">
+          Le mot de passe est requis
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Bouton soumettre -->
+      <button mat-raised-button color="primary" class="full-width" [disabled]="loginForm.invalid" type="submit">
+        Se connecter
+      </button>
+    </form>
+
+    <p class="mt-2">
+      Vous n'avez pas encore de compte ?
+      <a routerLink="/register" class="link-blue">S'inscrire</a>
+    </p>
+  </mat-card-content>
+</mat-card>
