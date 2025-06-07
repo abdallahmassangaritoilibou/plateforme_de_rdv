@@ -1,0 +1,108 @@
+mat-card-subtitle {
+  font-size: 1.2rem;
+  color: var(--gray-dark);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.login-card {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+mat-card-title {
+  text-align: center;
+  color: var(--primary-blue);
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Style des champs de formulaire avec transparence */
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.mat-form-field-appearance-fill.mat-focused .mat-form-field-flex {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-color: #3f51b5;
+  box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2);
+}
+
+/* Style du bouton avec transparence */
+.mat-raised-button.mat-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 25px;
+  padding: 12px 24px;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+}
+
+.mat-raised-button.mat-primary:hover:not([disabled]) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.mat-raised-button.mat-primary:disabled {
+  background: rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.26);
+}
+
+/* Style des labels */
+.mat-form-field-label {
+  color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.mat-focused .mat-form-field-label {
+  color: #3f51b5 !important;
+}
+
+/* Style des inputs */
+.mat-input-element {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.mat-input-element::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.mt-2 {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.mt-2 a {
+  color: #3f51b5;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.mt-2 a:hover {
+  text-decoration: underline;
+  color: #667eea;
+}
+
+/* Style de base pour le composant */
+:host {
+  display: block;
+  padding: 20px 0;
+}
